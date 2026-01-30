@@ -4,3 +4,12 @@ response = requests.post("http://localhost:5000/protocolo")
 
 print("Resposta da API:")
 print(response.json())
+
+# Como usar
+# python demo/test_protocolo.py
+# {
+#  "protocolo": "DF-1712609452",
+#  "status": "registrado"
+# }
+
+
