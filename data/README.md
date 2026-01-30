@@ -2,7 +2,7 @@
 
 ## Visão Geral
 
-Este projeto apresenta uma **solução digital inovadora e acessível para a Ouvidoria do Participa DF**, desenvolvida no contexto do **1º Hackathon em Controle Social – Desafio Participa DF (Trilha 2 – Ouvidoria)**.
+Este projeto apresenta uma **solução digital inovadora e acessível para a Ouvidoria do Participa DF**, desenvolvida no contexto do **1º Hackathon em Controle Social – Desafio Participa DF**.
 
 A proposta consiste em uma **Progressive Web App (PWA)** que permite ao cidadão registrar manifestações por **texto, áudio, imagem e vídeo**, com **emissão automática de protocolo**, **opção de anonimato**, **acessibilidade plena conforme WCAG** e **integração conceitual com o sistema de inteligência artificial IZA da Ouvidoria-Geral do DF**.
 
