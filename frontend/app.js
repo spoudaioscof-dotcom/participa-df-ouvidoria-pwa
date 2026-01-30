@@ -1,31 +1,38 @@
 let mediaRecorder;
 let audioChunks = [];
 
-function startRecording() {
+function iniciarGravacao() {
   navigator.mediaDevices.getUserMedia({ audio: true })
     .then(stream => {
       mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.start();
       audioChunks = [];
+      mediaRecorder.start();
+
+      document.getElementById("statusAudio").innerText =
+        "Gravando áudio por 5 segundos...";
 
       mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
-      document.getElementById("audioStatus").innerText = "Gravando áudio...";
-      
-      setTimeout(() => mediaRecorder.stop(), 5000);
-      mediaRecorder.onstop = () => {
-        document.getElementById("audioStatus").innerText =
-          "Áudio gravado (simulação de transcrição).";
-      };
+
+      setTimeout(() => {
+        mediaRecorder.stop();
+        document.getElementById("statusAudio").innerText =
+          "Áudio gravado (transcrição simulada)";
+      }, 5000);
     });
 }
 
-function submitManifestation() {
-  if (!document.getElementById("consent").checked) {
-    alert("É necessário consentimento LGPD.");
+function enviar() {
+  if (!document.getElementById("consentimento").checked) {
+    alert("É necessário aceitar o consentimento LGPD.");
     return;
   }
 
-  const protocol = "DF-" + Date.now();
-  document.getElementById("protocol").innerText =
-    "Protocolo gerado: " + protocol;
+  fetch("http://localhost:5000/protocolo", {
+    method: "POST"
+  })
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("protocolo").innerText =
+        "Protocolo gerado: " + data.protocolo;
+    });
 }
