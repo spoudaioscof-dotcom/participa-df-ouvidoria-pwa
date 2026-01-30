@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Participa DF – Ouvidoria</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Ouvidoria Participa DF</h1>
+
+  <label>
+    Manifestação (texto):
+    <textarea id="textInput"></textarea>
+  </label>
+
+  <br><br>
+
+  <button onclick="startRecording()">🎙️ Gravar Áudio</button>
+  <p id="audioStatus"></p>
+
+  <br>
+
+  <label>
+    <input type="checkbox" id="anonymous">
+    Registrar de forma anônima
+  </label>
+
+  <br><br>
+
+  <label>
+    <input type="checkbox" id="consent" required>
+    Concordo com o uso dos dados conforme LGPD
+  </label>
+
+  <br><br>
+
+  <button onclick="submitManifestation()">Enviar</button>
+
+  <p id="protocol"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>
