@@ -154,3 +154,11 @@ No MVP, essa integração é **simulada**, respeitando limites de acesso e segur
 O **Participa DF – Ouvidoria Multimodal** demonstra como tecnologia acessível, dados reais e inteligência artificial podem fortalecer o controle social, ampliar a escuta ativa do Estado e tornar a Ouvidoria mais próxima de quem mais precisa.
 
 A solução foi pensada para **funcionar no mundo real**, respeitando limitações técnicas, legais e sociais do setor público.
+
+### Emissão de Protocolo
+
+Cada manifestação registrada gera automaticamente um número de protocolo único,
+utilizado para rastreamento e acompanhamento pelo cidadão.
+
+No MVP do hackathon, o protocolo é gerado de forma automática pelo backend,
+com arquitetura preparada para integração futura com sistemas oficiais.
